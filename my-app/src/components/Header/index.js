@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './styles.scss';
 import { Link } from 'react-router-dom';
+import {connect} from 'react-redux';
+import { getNumbers } from './../../actions/getAction';
+
 
 import Logo from './../../assets/logo.jpeg';
 
 const Header = props => {
+    useEffect(() => {
+        getNumbers();
+    }, []);
     return(
         <header className="header">
             <div className="wrap">
@@ -20,6 +26,11 @@ const Header = props => {
                                 Register
                             </Link>
                         </li>
+                        <li>
+                            <Link to ="/cart">
+                                Cart <span>{props.basketProps.basketNumbers}</span>
+                            </Link>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -27,4 +38,8 @@ const Header = props => {
     );
 };
 
-export default Header;
+const mapStateToProps = state => ({
+    basketProps: state.basketState
+})
+
+export default connect(mapStateToProps, {getNumbers})(Header);
