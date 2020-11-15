@@ -1,5 +1,31 @@
-.directory {
-  height: 100%;
+.directory #bg {
+  clip-path: polygon(0 40%, 100% 40%, 100% 100%, 0 100%);
+  background-color: #E4E4E4;
+  height: calc(100% - 6.5rem - 10rem);
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  margin: 0;
+}
+.directory h2 {
+  font-size: 4rem;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.directory .item-container {
+  justify-content: center;
+  margin-top: 10rem;
+  display: grid;
+  grid-template-columns: 100% 100%;
+  grid-template-areas: "item-left item-right";
+}
+.directory .item-container .item-left {
+  grid-area: item-left;
+}
+.directory .item-container .item-right {
+  grid-area: item-right;
+  margin-left: 0px;
 }
 .directory .wrap {
   display: inline-block;
@@ -8,12 +34,6 @@
 }
 .directory .wrap .slide {
   background-color: black;
-}
-.directory .wrap .item {
-  height: 100%;
-  max-width: 1450px;
-  margin: 0 auto;
-  margin-top: 20px;
 }
 .directory .wrap .item .card_img {
   width: 18rem;

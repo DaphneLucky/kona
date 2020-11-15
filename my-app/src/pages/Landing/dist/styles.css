@@ -1,0 +1,99 @@
+.body #bg {
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+  background-color: #534335;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+@media (min-width: 840px) {
+  .body #bg {
+    clip-path: polygon(29% 0, 100% 0, 100% 100%, 78% 100%);
+  }
+}
+.body .header {
+  box-shadow: none;
+  background-color: #FFF;
+}
+.body .header .wrap {
+  position: relative;
+  height: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+}
+.body .header .wrap .logo {
+  width: 7rem;
+  position: absolute;
+  top: 80%;
+  left: 45%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+@media (min-width: 840px) {
+  .body .header .wrap .logo {
+    width: 11rem;
+    position: absolute;
+    top: 100%;
+    left: 30px;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+}
+.body .header .wrap .logo img {
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+.body .header .wrap .callToActions {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.body .header .wrap .callToActions ul, .body .header .wrap .callToActions li {
+  margin: 0;
+  padding: 0;
+}
+.body .header .wrap .callToActions li {
+  list-style-type: none;
+  display: inline-block;
+  padding-right: 20px;
+}
+.body .header .wrap .callToActions li a {
+  font-size: 1.8rem;
+  line-height: 1;
+  color: #FFF;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.body .header .wrap .callToActions li .cart {
+  padding: 30px;
+}
+.body .tagLine {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.body .tagLine h1 {
+  font-size: 4rem;
+}
+.body .tagLine .buttonLink {
+  font-size: 1.5rem;
+  grid-area: button;
+  color: #FFF;
+  background-color: #DF8E3B;
+  border-radius: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}

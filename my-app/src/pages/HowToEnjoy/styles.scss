@@ -1,0 +1,84 @@
+$colors: (
+    primary: #534335,
+    accent: #DF8E3B
+);
+
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+}
+
+$desktop: 840px;
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+.header {
+    box-shadow: none;
+    background-color: color(primary);
+
+    .wrap {
+        position: relative;
+        height: 100%;
+        max-width: 1450px;
+        margin: 0 auto;
+
+        .logo {
+            width: 7.0rem;
+            position: absolute;
+            top: 80%;
+            left: 45%;
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            transform: translateY(-50%);
+
+            @include desktop() {
+                width: 11.0rem;
+                position: absolute;
+                top: 100%; left: 30px;
+                -webkit-transform: translateY(-50%);
+                -moz-transform: translateY(-50%);
+                transform: translateY(-50%);
+            }
+
+            img {
+                display: block;
+                width: 100%;
+                margin: 0;
+            }
+        }
+
+        .callToActions {
+            position: absolute;
+            top: 50%; right: 10px; 
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            transform: translateY(-50%);
+
+            ul, li {
+                margin: 0;
+                padding: 0;
+            }
+
+            li {
+                list-style-type: none;
+                display: inline-block;
+                padding-right: 20px;
+
+                a {
+                    font-size: 1.8rem;
+                    line-height: 1;
+                    color: #FFF;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                }
+
+                .cart {
+                    padding: 30px;
+                }
+            }
+        }
+
+    }
+}

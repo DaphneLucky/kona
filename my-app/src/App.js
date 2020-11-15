@@ -11,6 +11,11 @@ import HomepageLayout from './layouts/HomepageLayout';
 import Homepage from './pages/Homepage';
 import Registration from './pages/Registration';
 import CartPage from './pages/CartPage';
+import Landing from './pages/Landing';
+import AboutUs from './pages/AboutUs';
+import HowToEnjoy from './pages/HowToEnjoy';
+import OriginalPage from './pages/OriginalPage';
+import MatchaPage from './pages/MatchaPage';
 
 import './default.scss';
 
@@ -21,12 +26,37 @@ function App() {
       <Switch>
         <Route exact path="/" render={() => (
             <HomepageLayout>
-              <Homepage />
+            <Landing />
             </HomepageLayout>
+        )}/>
+        <Route exact path="/shop" render={() => (
+            <MainLayout>
+              <Homepage />
+            </MainLayout>
+        )}/>
+        <Route path="/shop/original" render={() => (
+            <MainLayout>
+              <OriginalPage />
+            </MainLayout>
+        )}/>
+        <Route path="/shop/matcha" render={() => (
+            <MainLayout>
+              <MatchaPage />
+            </MainLayout>
         )}/>
         <Route path="/registration" render={() => (
             <MainLayout>
               <Registration />
+            </MainLayout>
+        )}/>
+        <Route path="/aboutUs" render={() => (
+            <MainLayout>
+              <AboutUs />
+            </MainLayout>
+        )}/>
+        <Route path="/howToEnjoy" render={() => (
+            <MainLayout>
+              <HowToEnjoy />
             </MainLayout>
         )}/>
         <Route path="/cart" render={() => (

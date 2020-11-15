@@ -1,0 +1,132 @@
+$colors: (
+    primary: #534335,
+    accent: #DF8E3B
+);
+
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+}
+
+$desktop: 840px;
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+.body{
+    #bg {
+        clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+        background-color: color(primary);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+
+        @include desktop() {
+            clip-path: polygon(29% 0, 100% 0, 100% 100%, 78% 100%);
+        }
+    }
+    .header {
+        box-shadow: none;
+        background-color: #FFF;
+    
+        .wrap {
+            position: relative;
+            height: 100%;
+            max-width: 1450px;
+            margin: 0 auto;
+    
+            .logo {
+                width: 7.0rem;
+                position: absolute;
+                top: 80%;
+                left: 45%;
+                -webkit-transform: translateY(-50%);
+                -moz-transform: translateY(-50%);
+                transform: translateY(-50%);
+
+                @include desktop() {
+                    width: 11.0rem;
+                    position: absolute;
+                    top: 100%; left: 30px;
+                    -webkit-transform: translateY(-50%);
+                    -moz-transform: translateY(-50%);
+                    transform: translateY(-50%);
+                }
+    
+                img {
+                    display: block;
+                    width: 100%;
+                    margin: 0;
+                }
+            }
+    
+            .callToActions {
+                position: absolute;
+                top: 50%; right: 10px; 
+                -webkit-transform: translateY(-50%);
+                -moz-transform: translateY(-50%);
+                transform: translateY(-50%);
+    
+                ul, li {
+                    margin: 0;
+                    padding: 0;
+                }
+    
+                li {
+                    list-style-type: none;
+                    display: inline-block;
+                    padding-right: 20px;
+    
+                    a {
+                        font-size: 1.8rem;
+                        line-height: 1;
+                        color: #FFF;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                    }
+    
+                    .cart {
+                        padding: 30px;
+                    }
+                }
+            }
+    
+        }
+    }
+
+    .tagLine {
+        position: absolute;
+        top: 50%; left: 10%; 
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        transform: translateY(-50%);
+
+        h1 {
+            font-size: 4rem;
+        }
+        .buttonLink {
+            font-size: 1.5rem;
+            grid-area: button;
+            color: #FFF;
+            background-color: color(accent);
+            border-radius: 15px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            display: block;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+    
+    
+    }
+
+    
+
+
+}
+
+

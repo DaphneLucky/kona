@@ -1,0 +1,67 @@
+$colors: (
+    primary: #534335,
+    accent: #DF8E3B
+);
+
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+}
+
+.product-detail-container {
+    max-width: 650px;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 70px;
+    display: grid;
+    grid-template-areas: 
+    "img desc";
+
+    .product-img {
+        grid-area: img;
+        img {
+            width: 20rem;
+            height: 20rem;
+        }
+    }
+    .product-desc {
+        grid-area: desc;
+        .price-size {
+            font-size: 1.5rem;
+            .size {
+                margin-left: 10px;
+            }
+        }
+        .ingredients {
+            margin-top: 10px;
+            border: black;
+            border-width: 2px 0 2px 0;
+            border-style: solid;
+            padding: 3px 0 3px 0;
+        }
+        .sizes {
+            button {
+                background-color: white;
+                border-radius: 8px;
+                border-color: color(primary);
+                color: black;
+                width: 5rem;
+            }
+            button:hover{
+                background-color: color(accent);
+                color: white;
+                border-color: color(accent);
+            }
+            .size-btn {
+                display: inline-block;
+                margin-left: 10px;
+            }
+        }
+        .add-cart-btn{
+            width: 100%;
+            background-color: color(accent);
+            border: none;
+            margin-top: 20px;
+            text-transform: uppercase;
+        }
+    }
+}
