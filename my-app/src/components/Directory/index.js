@@ -24,6 +24,7 @@ const Directory = props => {
     return (
         <div className="directory">
             <div id="bg"></div>
+            <div className="wrap">
             <h2>OUR PRODUCTS</h2>
                 <CardColumns>
                 <div className="item-container">
@@ -39,12 +40,6 @@ const Directory = props => {
                             Original
                         </Card.Text>
                         <Card.Title>From $2.00</Card.Title>
-                        <DropdownButton id="dropdown-basic-button" title={value} onSelect={handleSelect}>
-                            <Dropdown.Item eventKey="Uno (60gr)">Uno (60gr)</Dropdown.Item>
-                            <Dropdown.Item eventKey="Dieci (360gr)">Dieci (360gr)</Dropdown.Item>
-                            <Dropdown.Item eventKey="Mille (600gr)">Mille (600gr)</Dropdown.Item>
-                        </DropdownButton>
-                        <Button variant="primary" onClick={() => props.addBasket('original')}>Add to Cart</Button> 
                         </Card.Body>
                     </Card>
                     </div>
@@ -58,13 +53,12 @@ const Directory = props => {
                             Matcha
                         </Card.Text>
                         <Card.Title>From $2.50</Card.Title>
-                        <Button variant="primary" onClick={() => props.addBasket('matcha')}>Add to Cart</Button>
-                        <Button variant="primary">Go somewhere</Button>
                         </Card.Body>
                     </Card>
                     </div>
                 </div>
                 </CardColumns>     
+                </div>
 
         </div> 
     );

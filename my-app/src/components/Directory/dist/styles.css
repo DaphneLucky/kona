@@ -4,49 +4,25 @@
   height: calc(100% - 6.5rem - 10rem);
   width: 100%;
   position: absolute;
-  z-index: -1;
-  margin: 0;
 }
-.directory h2 {
+.directory .wrap h2 {
   font-size: 4rem;
   margin-top: 50px;
   margin-bottom: 30px;
   text-align: center;
 }
-.directory .item-container {
-  justify-content: center;
-  margin-top: 10rem;
+.directory .wrap .item-container {
+  max-width: 650px;
+  justify-content: space-around;
+  margin: 0 auto;
+  margin-top: 70px;
   display: grid;
-  grid-template-columns: 100% 100%;
+  grid-column-gap: 100px;
   grid-template-areas: "item-left item-right";
 }
-.directory .item-container .item-left {
+.directory .wrap .item-container .item-left {
   grid-area: item-left;
 }
-.directory .item-container .item-right {
+.directory .wrap .item-container .item-right {
   grid-area: item-right;
-  margin-left: 0px;
-}
-.directory .wrap {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-}
-.directory .wrap .slide {
-  background-color: black;
-}
-.directory .wrap .item .card_img {
-  width: 18rem;
-  height: 18rem;
-  display: block;
-  margin: 10px auto 0 auto;
-}
-.directory .wrap .item::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
 }
