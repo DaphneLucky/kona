@@ -3,7 +3,7 @@ import './styles.scss';
 import { Link } from 'react-router-dom';
 import {connect} from 'react-redux';
 import { getNumbers } from './../../actions/getAction';
-
+import Burger from './Burger';
 
 import Logo from './../../assets/brown_logo.jpeg';
 
@@ -19,23 +19,10 @@ const Header = props => {
                     <img src={Logo} alt="Kona LOGO"/>
                 </Link>
             </div>
+            <Burger />
+                
             <div className="callToActions">
                 <ul>
-                    <li>
-                        <Link to ="/shop">
-                            Shop
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to ="/howToEnjoy">
-                            How to enjoy
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to ="/aboutUs">
-                            About Us
-                        </Link>
-                    </li>
                     <li>
                     <div className="cart">
                         <Link to ="/cart">

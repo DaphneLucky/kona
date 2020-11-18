@@ -5,7 +5,7 @@
   width: 100%;
   position: absolute;
 }
-@media (min-width: 840px) {
+@media (min-width: 841px) {
   .body #bg {
     clip-path: polygon(29% 0, 100% 0, 100% 100%, 78% 100%);
   }
@@ -29,7 +29,7 @@
   -moz-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-@media (min-width: 840px) {
+@media (min-width: 841px) {
   .body .header .wrap .logo {
     width: 11rem;
     position: absolute;

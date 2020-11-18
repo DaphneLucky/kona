@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 import {connect} from 'react-redux';
 import { getNumbers } from './../../actions/getAction';
 
-import Logo from './../../assets/logo.jpeg';
 
 const Landing = props => {
     useEffect(() => {
@@ -17,41 +16,8 @@ const Landing = props => {
 
         <div className="body">
             <div id="bg"></div>
-            <header className="header">
-            <div className="wrap">
-                <div className="logo">
-                    <Link to ="/">
-                        <img src={Logo} alt="Kona LOGO"/>
-                    </Link>
-                </div>
-                <div className="callToActions">
-                    <ul>
-                        <li>
-                            <Link to ="/shop">
-                                Shop
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to ="/howToEnjoy">
-                                How to enjoy
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to ="/aboutUs">
-                                About Us
-                            </Link>
-                        </li>
-                        <li>
-                        <div className="cart">
-                            <Link to ="/cart">
-                                Cart <span>{props.basketProps.basketNumbers}</span>
-                            </Link>
-                        </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </header>
+            <Header />
+
             <div className="tagLine">
                 <h1>Specially <br />
                     made for <br />
