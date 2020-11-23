@@ -16,11 +16,15 @@ const Ul = styled.ul`
     li {
         padding: 18px 10px;
         a {
-            font-size: 1.8rem;
+            font-size: 1.rem;
             line-height: 1;
             color: white;
             text-decoration: none;
             text-transform: uppercase;
+        }
+        a:hover {
+            border-bottom: 1px solid #FFF;
+            padding-bottom: 1px;
         }
     }
     @media (max-width: 840px) {

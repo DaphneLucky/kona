@@ -9,8 +9,9 @@ const AboutUs = props => {
                 <h3>
                     ABOUT US
                 </h3>
-                <h4>We are ... </h4>
-                <h4>#KONAPeople</h4>
+                <h4>We are coffee enthusiasts based in Melbourne. We believe in the future of coffee and how coffee can put a smile in peoples' faces. </h4>
+                <h3>#KONAPeople</h3>
+                
             </div>
         );
 }
