@@ -1,8 +1,15 @@
-h1 {
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    transform: translateY(-50%);
+.about-us {
+    max-width: 650px;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 70px;
+    h3{
+        font-size: 3rem;
+        margin-top: 50px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    h4 {
+        text-align: center;
+    }
 }

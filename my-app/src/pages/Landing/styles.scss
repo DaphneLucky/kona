@@ -27,6 +27,28 @@ $desktop: 841px;
             clip-path: polygon(29% 0, 100% 0, 100% 100%, 78% 100%);
         }
     }
+    .konaImg {
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform:translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        @include desktop(){
+            left: 60%;
+            top: 50%;
+        }
+        img{
+            display: block;
+            margin: 0;
+            width: 20rem;
+            @include desktop(){
+                display: block;
+                margin: 0;
+                width: 45rem;
+            }
+        }
+    }
     .header {
         box-shadow: none;
         background-color: #FFF;
@@ -62,49 +84,26 @@ $desktop: 841px;
                 }
             }
     
-            .callToActions {
-                position: absolute;
-                top: 50%; right: 10px; 
-                -webkit-transform: translateY(-50%);
-                -moz-transform: translateY(-50%);
-                transform: translateY(-50%);
-    
-                ul, li {
-                    margin: 0;
-                    padding: 0;
-                }
-    
-                li {
-                    list-style-type: none;
-                    display: inline-block;
-                    padding-right: 20px;
-    
-                    a {
-                        font-size: 1.8rem;
-                        line-height: 1;
-                        color: #FFF;
-                        text-decoration: none;
-                        text-transform: uppercase;
-                    }
-    
-                    .cart {
-                        padding: 30px;
-                    }
-                }
-            }
-    
         }
     }
 
     .tagLine {
         position: absolute;
-        top: 50%; left: 10%; 
-        -webkit-transform: translateY(-50%);
-        -moz-transform: translateY(-50%);
-        transform: translateY(-50%);
+        left: 50%;
+        top: 75%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform:translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        @include desktop(){
+            left: 20%;
+            top: 50%;
+        }
 
         h1 {
-            font-size: 4rem;
+            font-size: 3rem;
+            @include desktop(){
+                font-size: 4rem;
+            }
         }
         .buttonLink {
             font-size: 1.5rem;
@@ -120,6 +119,12 @@ $desktop: 841px;
             padding: 15px;
             margin-top: 20px;
         }
+
+        .buttonLink:hover {
+            background-color: #d97e21;
+        }
+
+
     
     
     }

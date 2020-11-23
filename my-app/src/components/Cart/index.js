@@ -43,7 +43,7 @@ function Cart({basketProps, productQuantity, clearProduct}) {
                     <span>{product.numbers}</span>
                     <ion-icon onClick={() => productQuantity('increase', product.tagName)} className="increase" name="arrow-forward-circle-outline"></ion-icon>
                 </div>
-                <div className="total">${product.numbers * product.price},00</div>
+                <div className="total">${product.numbers * product.price}.00</div>
             </Fragment>
         )
     });
@@ -61,7 +61,7 @@ function Cart({basketProps, productQuantity, clearProduct}) {
             </div>
             <div className="basketTotalContainer">
                 <h4 className="basketTotalTitle">Basket Total</h4>
-                <h4 className="basketTotal">{basketProps.cartCost}.00</h4>
+                <h4 className="basketTotal">${basketProps.cartCost}.00</h4>
             </div>
         </div>
     )

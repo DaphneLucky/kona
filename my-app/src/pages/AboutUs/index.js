@@ -2,17 +2,17 @@ import React, {Component} from 'react';
 
 import './styles.scss';
 
-class AboutUs extends Component {
+const AboutUs = props => {
     
-    render() {
         return (
-            <div>
-                <h1>
-                    About Us
-                </h1>
+            <div className="about-us">
+                <h3>
+                    ABOUT US
+                </h3>
+                <h4>We are ... </h4>
+                <h4>#KONAPeople</h4>
             </div>
         );
-    }
 }
 
 export default AboutUs;

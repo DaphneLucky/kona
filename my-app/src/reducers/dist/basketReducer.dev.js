@@ -20,7 +20,7 @@ var initialState = {
     original: {
       name: "Original",
       tagName: "original",
-      price: 12.00,
+      price: 13.00,
       numbers: 0,
       inCart: false
     },
