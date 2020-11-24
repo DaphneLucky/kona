@@ -5,7 +5,7 @@ import Header from './../../components/Header';
 import { Link } from 'react-router-dom';
 import {connect} from 'react-redux';
 import { getNumbers } from './../../actions/getAction';
-import Kona_bag from './../../assets/kona_bag.png';
+import Kona_bag from './../../assets/illustrated_bag.png';
 
 const Landing = props => {
     useEffect(() => {
