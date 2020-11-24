@@ -1,3 +1,27 @@
+$colors: (
+    primary: #534335,
+    accent: #DF8E3B
+);
+
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+}
+
+$desktop: 841px;
+
+$tablet: 576px;
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$tablet}) and (max-width: #{$desktop}) {
+        @content;
+    }
+}
 .directory {
     // max-width: 650px;
     // justify-content: space-around;
@@ -11,27 +35,45 @@
         height: calc(100% - 6.5rem - 10rem);
         width: 100%;
         position: absolute;
-        // z-index: -1;
+        z-index: -1;
         // margin: 0;
 
     }
     .wrap {
         h2 {
-            font-size: 4rem;
+            font-size: 2rem;
             margin-top: 50px;
             margin-bottom: 30px;
             text-align: center;
+            @include desktop(){
+                font-size: 4rem;
+            }
+            @include tablet(){
+                font-size: 3rem;
+            }
         }
         .item-container {
-            max-width: 650px;
-            justify-content: space-around;
+            // max-width: 650px;
             margin: 0 auto;
-            margin-top: 70px;
             display: grid;
-            grid-column-gap: 100px;
+            justify-content: space-around;
             grid-template-areas: 
-                "item-left item-right";
+            "item-left"
+            "item-right";
+            
+            @include desktop(){
+                margin-top: 70px;
+                grid-column-gap: 100px;
+                grid-template-areas: 
+                    "item-left item-right";
+            }
     
+            @include tablet(){
+                margin-top: 70px;
+                grid-column-gap: 80px;
+                grid-template-areas: 
+                    "item-left item-right";
+            }
             .item-left {
                 grid-area: item-left;
             }

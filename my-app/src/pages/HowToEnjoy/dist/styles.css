@@ -37,10 +37,10 @@
   width: 7rem;
   position: absolute;
   top: 80%;
-  left: 45%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  transform: translateY(-50%);
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 @media (min-width: 840px) {
   .header .wrap .logo {

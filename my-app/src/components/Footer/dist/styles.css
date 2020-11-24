@@ -1,10 +1,14 @@
 .footer {
   height: 5rem;
-  position: absolute;
-  bottom: 0;
   background-color: #534335;
   width: 100%;
   color: #FFF;
+}
+@media (min-width: 841px) {
+  .footer {
+    position: absolute;
+    bottom: 0;
+  }
 }
 .footer .wrap {
   max-width: 1450px;

@@ -1,10 +1,20 @@
+$desktop: 841px;
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
 .footer {
     height: 5rem;
-    position: absolute;
-    bottom: 0;
     background-color: #534335;
     width: 100%;
     color: #FFF;
+    @include desktop(){
+        position: absolute;
+        bottom: 0;
+    }
     .wrap{
         max-width: 1450px;
         padding: 10px 20px;
