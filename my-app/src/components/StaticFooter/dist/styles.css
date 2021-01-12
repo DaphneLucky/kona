@@ -1,0 +1,17 @@
+.footerStatic {
+  height: 5rem;
+  background-color: #534335;
+  width: 100%;
+  color: #FFF;
+}
+@media (min-height: 876px) {
+  .footerStatic {
+    position: absolute;
+    bottom: 0;
+  }
+}
+.footerStatic .wrap {
+  max-width: 1450px;
+  padding: 10px 20px;
+  margin: 0 auto;
+}

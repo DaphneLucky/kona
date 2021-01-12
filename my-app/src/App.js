@@ -6,6 +6,7 @@ import store from './store.js';
 //layouts
 import MainLayout from './layouts/MainLayout';
 import HomepageLayout from './layouts/HomepageLayout';
+import StaticLayout from './layouts/StaticLayout';
 
 //pages
 import Homepage from './pages/Homepage';
@@ -50,14 +51,14 @@ function App() {
             </MainLayout>
         )}/>
         <Route path="/aboutUs" render={() => (
-            <MainLayout>
+            <StaticLayout>
               <AboutUs />
-            </MainLayout>
+            </StaticLayout>
         )}/>
         <Route path="/howToEnjoy" render={() => (
-            <MainLayout>
+            <StaticLayout>
               <HowToEnjoy />
-            </MainLayout>
+            </StaticLayout>
         )}/>
         <Route path="/cart" render={() => (
             <MainLayout>

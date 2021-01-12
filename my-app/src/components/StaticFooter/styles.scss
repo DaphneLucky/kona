@@ -1,13 +1,10 @@
-$desktop: 841px;
-
 @mixin desktop {
-    @media (min-width: #{$desktop}){
+    @media (min-height: 876px) {
         @content;
     }
 }
 
-
-.footer {
+.footerStatic {
     height: 5rem;
     background-color: #534335;
     width: 100%;
