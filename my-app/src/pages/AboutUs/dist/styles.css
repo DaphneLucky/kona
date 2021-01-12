@@ -13,3 +13,11 @@
 .about-us h4 {
   text-align: center;
 }
+.about-us .images {
+  width: 18rem;
+  height: 18rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-bottom: 20px;
+}
