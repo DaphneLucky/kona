@@ -1,81 +1,52 @@
-.steps {
-  max-width: 650px;
-  justify-content: space-around;
-  margin: 0 auto;
-  margin-top: 70px;
+.steps .player-wrapper {
+  margin-top: 60px;
+  padding-top: 56.25%;
+  position: relative;
 }
-.steps .card_wrap {
-  border-radius: 20px;
-  padding: 30px;
-  background-color: #504337;
-}
-.steps .card_wrap .card_style {
-  background-color: #504337;
-  border: none;
-}
-.steps .card_wrap .card_style .card_image {
-  width: 10rem;
-  height: 10rem;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-.steps .card_wrap .card_style .border {
-  border-bottom: 1px solid;
-  width: 20%;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-.steps .card_wrap .card_style .card_title {
-  color: white;
-  text-align: center;
-  font-size: 1.3rem;
-  margin-top: 10px;
-  margin-bottom: 5px;
-}
-.steps .card_wrap .card_style .step2_wrap {
-  margin: 0 auto;
-  display: grid;
-  justify-content: space-around;
-  grid-column-gap: 100px;
-  grid-template-areas: "hot cold";
-}
-.steps .card_wrap .card_style .hot {
-  grid-area: hot;
-}
-.steps .card_wrap .card_style .cold {
-  grid-area: cold;
-}
-.steps #bg {
-  background-color: white;
-  height: 100%;
-  width: 100%;
+.steps .player-wrapper .react-player {
+  position: absolute;
   top: 0;
   left: 0;
-  position: absolute;
-  z-index: -1;
+}
+@media (min-width: 841px) {
+  .steps {
+    max-width: 650px;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding-bottom: 30px;
+  }
+}
+@media (min-width: 576px) and (max-width: 841px) {
+  .steps {
+    max-width: 650px;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 70px;
+    padding-bottom: 30px;
+  }
 }
 .steps h3 {
-  font-size: 3rem;
-  margin-top: 50px;
-  margin-bottom: 30px;
-  text-align: center;
+  font-size: 2.3rem;
+  margin: 0 0 1rem;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  border-bottom: 2px solid #252525;
 }
 .steps h4 {
-  font-size: 2rem;
-}
-.steps h5 {
   font-size: 1.5rem;
+  color: #DF8E3B;
+  padding-top: 5px;
 }
-.steps h6 {
+.steps p {
   font-size: 1.5rem;
-  margin-top: 20px;
+  padding-top: 10px;
+  color: #1c1c1c;
 }
 .steps li {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
+  padding-bottom: 10px;
+  color: #1c1c1c;
+  font-style: italic;
 }
 
 .header {
@@ -97,7 +68,7 @@
   -moz-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-@media (min-width: 840px) {
+@media (min-width: 841px) {
   .header .wrap .logo {
     width: 11rem;
     position: absolute;

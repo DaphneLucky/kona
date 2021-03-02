@@ -25,7 +25,10 @@ const Directory = props => {
         <div className="directory">
             <div id="bg"></div>
             <div className="wrap">
-            <h2>OUR PRODUCTS</h2>
+            <div className="headings">
+                <h2>Kona Coffee Store</h2>
+                <p className="subtitle">We produce freshly roasted specialty coffee each day with an unmatched attention to detail. Each lot is carefully selected, profiled, tweaked and cupped rigorously before being made available to you.</p>
+            </div>   
                 <CardColumns>
                 <div className="item-container">
                     <div className="item-left">

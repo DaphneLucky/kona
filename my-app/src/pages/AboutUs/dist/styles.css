@@ -1,16 +1,57 @@
+.headings {
+  background-color: #f0ede8;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.headings h2 {
+  font-size: 2rem;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+@media (min-width: 841px) {
+  .headings h2 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 576px) and (max-width: 841px) {
+  .headings h2 {
+    font-size: 3rem;
+  }
+}
+.headings .subtitle {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 1.3rem;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 841px) {
+  .headings .subtitle {
+    padding-left: 300px;
+    padding-right: 300px;
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 576px) and (max-width: 841px) {
+  .headings .subtitle {
+    font-size: 1.5rem;
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+}
+
 .about-us {
   max-width: 650px;
   justify-content: space-around;
   margin: 0 auto;
-  margin-top: 70px;
+  margin-top: 30px;
+  padding-bottom: 20px;
 }
 .about-us h3 {
   font-size: 3rem;
-  margin-top: 50px;
   margin-bottom: 30px;
-  text-align: center;
-}
-.about-us h4 {
   text-align: center;
 }
 .about-us .images {
