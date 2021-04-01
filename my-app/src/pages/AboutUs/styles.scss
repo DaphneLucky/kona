@@ -48,6 +48,7 @@ $tablet: 576px;
         font-size: 1.3rem;
         padding-left: 15px;
         padding-right: 15px;
+        line-height: 1.6;
         @include desktop(){
             padding-left: 300px;
             padding-right: 300px;

@@ -7,17 +7,45 @@ $colors: (
     @return map-get($colors, $color-name)
 }
 
+$desktop: 841px;
+
+$tablet: 576px;
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$tablet}) and (max-width: #{$desktop}) {
+        @content;
+    }
+}
+
 .product-detail-container {
     max-width: 650px;
-    justify-content: space-around;
     margin: 0 auto;
     margin-top: 70px;
+    align-items: center;
     display: grid;
     grid-template-areas: 
-    "img desc";
+    "img"
+    "desc";
+    justify-content: center;
+    @include desktop(){
+        justify-content: space-around;
+        display: grid;
+        grid-template-areas: 
+        "img desc";
+    }
 
     .product-img {
         grid-area: img;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 30px;
         img {
             width: 20rem;
             height: 20rem;
@@ -46,6 +74,7 @@ $colors: (
                 border-color: color(primary);
                 color: black;
                 width: 5rem;
+                margin-bottom: 30px;
             }
             button:hover{
                 background-color: color(accent);

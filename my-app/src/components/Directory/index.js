@@ -28,7 +28,7 @@ const Directory = props => {
             <div id="bg"></div>
             <div className="wrap">
             <div className="headings">
-                <h2>Kona Coffee Store</h2>
+                <h2>KONA Coffee Store</h2>
                 <p className="subtitle">We produce freshly roasted specialty coffee each day with an unmatched attention to detail. Each lot is carefully selected, profiled, tweaked and cupped rigorously before being made available to you.</p>
             </div>   
                 <CardColumns>
