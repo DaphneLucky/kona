@@ -1,7 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import {connect} from 'react-redux';
 import { productQuantity, clearProduct } from './../../actions/productQuantity';
-import Slide1 from './../../assets/3.JPG';
+import Slide1 from './../../assets/5.JPG';
 import Slide2 from './../../assets/4.JPG';
 
 import './styles.scss';
@@ -27,7 +27,11 @@ function Cart({basketProps, productQuantity, clearProduct}) {
             return Slide2;
         } else if(product.tagName === 'matcha') {
             return Slide1;
-        }
+        } else if(product.tagName === 'original60gr' || product.tagName === 'original360gr' || product.tagName === 'original600gr' || product.tagName === 'original1500gr' ) {
+            return Slide2;
+        } else if(product.tagName === 'matcha60gr' || product.tagName === 'matcha360gr' || product.tagName === 'matcha600gr' || product.tagName === 'matcha1500gr' ) {
+            return Slide1;
+        } 
     }
 
     productsInCart = productsInCart.map((product, index) => {

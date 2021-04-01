@@ -15,11 +15,12 @@ import {Card, Button, Carousel, CardColumns, DropdownButton, Dropdown} from 'rea
 import './styles.scss';
 
 const OriginalPage = props => {
-    const [value,setValue]=useState('Pick Size');
+    const [value,setValue]=useState('');
     const handleSelect=(e)=>{
-        alert(e);
-        setValue(e)
+        setValue(e.target.value);
+        alert(e.target.value);
     }
+
     console.log(props);
     return (
         <div className="product-detail-container">
@@ -28,27 +29,43 @@ const OriginalPage = props => {
             </div>
             <div className="product-desc">
                 <h3>ORIGINAL</h3>
-                <div className="price-size">
-                    <span>$6.00</span>
-                    <span className="size">(250gr)</span>
-                </div>
                 <h5 className="ingredients">Coffee + Creamer + Sugar</h5>
-                <h4>Size</h4>
+                <h4>Pick your size:</h4>
+                <div className="price-size">
+                    <span>60gr - $2.00</span>
+                    {/* <span className="size">(60gr)</span> */}
+                </div>
+
+                <div className="price-size">
+                    <span>360gr - $6.00</span>
+                    {/* <span className="size">(360gr)</span> */}
+                </div>
+
+                <div className="price-size">
+                    <span>600gr - $8.00</span>
+                    {/* <span className="size">(600gr)</span> */}
+                </div>
+
+                <div className="price-size">
+                    <span>1500gr - $15.00</span>
+                    {/* <span className="size">(1500gr)</span> */}
+                </div>
+                
                 <div className="sizes">
                     <span className="size-btn-start">
-                        <Button variant="primary">60gr</Button>
+                        <Button variant="primary" onClick={() => props.addBasket("original60gr")}>60gr</Button>
                     </span>
                     <span className="size-btn">
-                        <Button variant="primary">360gr</Button>
+                        <Button variant="primary" onClick={() => props.addBasket("original360gr")}>360gr</Button>
                     </span>
                     <span className="size-btn">
-                        <Button variant="primary">600gr</Button>
+                        <Button variant="primary"onClick={() => props.addBasket("original600gr")}>600gr</Button>
                     </span>
                     <span className="size-btn">
-                        <Button variant="primary">1500gr</Button>
+                        <Button variant="primary"onClick={() => props.addBasket("original1500gr")}>1500gr</Button>
                     </span>
                 </div>
-                <Button variant="primary" className="add-cart-btn" onClick={() => props.addBasket('original')}>Add to Cart</Button> 
+                {/* <Button variant="primary" className="add-cart-btn" onClick={() => props.addBasket("original")}>Add to Cart</Button>  */}
             </div>
         </div> 
     );

@@ -20,14 +20,70 @@ var initialState = {
     original: {
       name: "Original",
       tagName: "original",
-      price: 13.00,
+      price: 10.00,
+      numbers: 0,
+      inCart: false
+    },
+    original60gr: {
+      name: "Original (60gr)",
+      tagName: "original60gr",
+      price: 2.00,
+      numbers: 0,
+      inCart: false
+    },
+    original360gr: {
+      name: "Original (360gr)",
+      tagName: "original360gr",
+      price: 6.00,
+      numbers: 0,
+      inCart: false
+    },
+    original600gr: {
+      name: "Original (600gr)",
+      tagName: "original600gr",
+      price: 8.00,
+      numbers: 0,
+      inCart: false
+    },
+    original1500gr: {
+      name: "Original (1500gr)",
+      tagName: "original1500gr",
+      price: 15.00,
       numbers: 0,
       inCart: false
     },
     matcha: {
       name: "Matcha",
       tagName: "matcha",
-      price: 35.00,
+      price: 30.00,
+      numbers: 0,
+      inCart: false
+    },
+    matcha60gr: {
+      name: "Matcha (60gr)",
+      tagName: "matcha60gr",
+      price: 3.00,
+      numbers: 0,
+      inCart: false
+    },
+    matcha360gr: {
+      name: "Matcha (360gr)",
+      tagName: "matcha360gr",
+      price: 7.00,
+      numbers: 0,
+      inCart: false
+    },
+    matcha600gr: {
+      name: "Mathca (600gr)",
+      tagName: "matcha600gr",
+      price: 9.00,
+      numbers: 0,
+      inCart: false
+    },
+    matcha1500gr: {
+      name: "Mathca (1500gr)",
+      tagName: "matcha1500gr",
+      price: 16.00,
       numbers: 0,
       inCart: false
     }

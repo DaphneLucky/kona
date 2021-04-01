@@ -49,7 +49,7 @@ const Directory = props => {
                     <div className="item-right">
                     <Card style={{width: '25rem', boxShadow:'4px 4px 6px 0px rgba(50, 50, 50, 0.64)'}}>
                         <Link to="/shop/matcha" className="buttonLink">
-                        <Card.Img variant="top" className="card_img" src={Slide1} style={{width: '18rem', height: '18rem', display: 'block',margin: '3rem auto 1rem'}}/>
+                        <Card.Img variant="top" className="card_img" src={Slide3} style={{width: '18rem', height: '18rem', display: 'block',margin: '3rem auto 1rem'}}/>
                         </Link>
                         <Card.Body>
                         <Card.Text>
