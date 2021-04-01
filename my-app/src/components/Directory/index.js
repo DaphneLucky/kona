@@ -4,6 +4,8 @@ import ShopRight from './../../assets/2.JPG';
 import Slide1 from './../../assets/3.JPG';
 import Slide2 from './../../assets/4.JPG';
 import Slide3 from './../../assets/5.JPG';
+import matchaBag from './../../assets/matcha_bag.png';
+import originalBag from './../../assets/original_bag.png';
 
 import { connect } from 'react-redux';
 import { addBasket } from './../../actions/addAction';
@@ -32,13 +34,13 @@ const Directory = props => {
                 <CardColumns>
                 <div className="item-container">
                     <div className="item-left">
-                    <Card style={{width: '25rem', boxShadow:'4px 4px 6px 0px rgba(50, 50, 50, 0.64)'}}>
+                    <Card style={{width: '25rem', boxShadow:'0px 0px 0.5px 0px rgba(50, 50, 50, 0.64)', backgroundColor:'#735235'}}>
                         <div className="card_img">
                             <Link to="/shop/original" className="buttonLink">
-                            <Card.Img variant="top" src={Slide2} style={{width: '18rem', height: '18rem', display: 'block',margin: '3rem auto 1rem'}}/>
+                            <Card.Img variant="top" src={originalBag} style={{width: '15rem', display: 'block',margin: '3rem auto 1rem'}}/>
                             </Link>
                         </div>
-                        <Card.Body>
+                        <Card.Body style={{backgroundColor:'white'}}>
                         <Card.Text>
                             Original
                         </Card.Text>
@@ -47,15 +49,15 @@ const Directory = props => {
                     </Card>
                     </div>
                     <div className="item-right">
-                    <Card style={{width: '25rem', boxShadow:'4px 4px 6px 0px rgba(50, 50, 50, 0.64)'}}>
+                    <Card style={{width: '25rem', boxShadow:'0px 0px 0.5px 0px rgba(50, 50, 50, 0.64)', backgroundColor:'#747c5b'}}>
                         <Link to="/shop/matcha" className="buttonLink">
-                        <Card.Img variant="top" className="card_img" src={Slide3} style={{width: '18rem', height: '18rem', display: 'block',margin: '3rem auto 1rem'}}/>
+                        <Card.Img variant="top" className="card_img" src={matchaBag} style={{width: '15rem', display: 'block',margin: '3rem auto 1rem'}}/>
                         </Link>
-                        <Card.Body>
+                        <Card.Body style={{backgroundColor:'white'}}>
                         <Card.Text>
                             Matcha
                         </Card.Text>
-                        <Card.Title>From $2.50</Card.Title>
+                        <Card.Title>From $3.00</Card.Title>
                         </Card.Body>
                     </Card>
                     </div>
